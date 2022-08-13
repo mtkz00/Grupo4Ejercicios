@@ -1,7 +1,7 @@
 -- Creacion base de datos
 --------------------------------------------------------
-create database `Peluqueria__Canina`
-use `Peluqueria__Canina`
+create database `Peluqueria__Canina`;
+use `Peluqueria__Canina`;
 
 
 -- Creacion tabla.`Dueno`
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `Peluqueria__Canina`.`Dueno` (
   `DNI` INT NOT NULL,
   `Nombre` VARCHAR(45) NULL,
   `Apellido` VARCHAR(45) NULL,
-  `Telefono` INT NULL,
+  `Telefono` VARCHAR(45) NULL,
   `Direccion` VARCHAR(45) NULL,
   PRIMARY KEY (`DNI`),
   UNIQUE INDEX `DNI_UNIQUE` (`DNI` ASC) VISIBLE)
@@ -56,10 +56,10 @@ ENGINE = InnoDB;
 -- PUNTO 2)
 -----------------------------------------------------
 
--- Dueño
+-- DueÃ±o
 -----------------------------------------------------
-INSERT INTO `Dueno` VALUES (42566994,`Daira`, `Salazar`, 3329 12345678, `Salta 9295`)
+INSERT INTO `Dueno` VALUES (42566994,'Daira', 'Salazar', '332912345678', 'Salta 9295');
 
 -- Perro
 -----------------------------------------------------
-INSERT INTO `Perro` VALUES (DEFAULT, `Luna`, `01/10/2020`, `Hembra`, 42566994)
+INSERT INTO `Perro` VALUES (DEFAULT, 'Luna', '2020-10-01', 'Hembra', 42566994);
